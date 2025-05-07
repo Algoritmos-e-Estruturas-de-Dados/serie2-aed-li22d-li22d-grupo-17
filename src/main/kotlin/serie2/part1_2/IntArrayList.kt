@@ -22,13 +22,16 @@ class IntArrayList(val capacity:Int) : Iterable <Int> {
     }
 
     fun addToAll(x:Int)   {
-        for (index in 0..size-1){
+        for (i in 0..size){
+            val index = (index+1) % capacity
             data[index] += x
         }
     }
 
-    fun remove():Boolean {
-        TODO("Not yet implemented")
+    fun remove(): Boolean {
+        if (size == 0) return false
+        head = (head + 1) % capacity ; size--
+        return true
     }
 
     override fun iterator(): Iterator<Int> { // Opcional
