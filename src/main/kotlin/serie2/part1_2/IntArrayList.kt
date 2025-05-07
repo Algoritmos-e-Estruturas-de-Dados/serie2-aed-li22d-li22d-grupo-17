@@ -13,19 +13,18 @@ class IntArrayList(val capacity:Int) : Iterable <Int> {
         tail = (tail + 1) % capacity
         size++
         return true
-
-        TODO("Not yet implemented")
     }
 
     fun get(n:Int):Int?  {
        if(n>=size||n<0)return null //Indice inválido
         val index = (head + n) % capacity
             return data[index]
-        TODO("Not yet implemented")
     }
 
     fun addToAll(x:Int)   {
-        TODO("Not yet implemented")
+        for (index in 0..size-1){
+            data[index] += x
+        }
     }
 
     fun remove():Boolean {
