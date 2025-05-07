@@ -23,7 +23,7 @@ class IntArrayList(val capacity:Int) : Iterable <Int> {
 
     fun addToAll(x:Int)   {
         for (i in 0..size){
-            val index = (index+1) % capacity
+            val index = (head + 1) % capacity
             data[index] += x
         }
     }
