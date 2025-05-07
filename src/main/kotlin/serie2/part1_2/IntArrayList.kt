@@ -1,14 +1,14 @@
 package serie2.part1_2
 
-class IntArrayList(val capacity:Int) : Iterable <Int> {
-    val data = IntArray(capacity)
-    var head = 0
-    var size = 0
-    var tail = 0
+class IntArrayList(private val capacity:Int) : Iterable <Int> {
+    private val data = IntArray(capacity)
+    private var head = 0
+    private var size = 0
+    private var tail = 0
 
 
     fun append(x:Int):Boolean {
-       if(size==capacity)return false //Se a lista tiver cheia
+       if(size==capacity)return false
         data[tail] = x
         tail = (tail + 1) % capacity
         size++
@@ -16,7 +16,7 @@ class IntArrayList(val capacity:Int) : Iterable <Int> {
     }
 
     fun get(n:Int):Int?  {
-       if(n>=size||n<0)return null //Indice inválido
+       if(n>=size||n<0)return null
         val index = (head + n) % capacity
             return data[index]
     }
@@ -34,7 +34,7 @@ class IntArrayList(val capacity:Int) : Iterable <Int> {
         return true
     }
 
-    override fun iterator(): Iterator<Int> { // Opcional
+    override fun iterator(): Iterator<Int> {
         TODO("Not yet implemented")
     }
 }
