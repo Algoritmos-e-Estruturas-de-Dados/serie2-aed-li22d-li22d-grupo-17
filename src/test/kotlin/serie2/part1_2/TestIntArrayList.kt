@@ -2,7 +2,7 @@ package serie2.part1_2
 
 import kotlin.test.*
 
-class TestIntArrayList {
+class TestIntArrayList() {
     val N = 1000
 
     @Test
@@ -21,7 +21,7 @@ class TestIntArrayList {
     fun testWithThreeElement() {
         val q = IntArrayList(3)
         assertTrue(q.append(10))
-        assertEquals(10, q.get(1))
+        assertEquals(10, q.get(0))
         assertTrue(q.append(20))
         assertEquals(20, q.get(1))
         q.addToAll(100)
