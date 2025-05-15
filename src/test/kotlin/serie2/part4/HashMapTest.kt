@@ -1,7 +1,7 @@
 package serie2.part4
 
 import kotlin.test.*
-/*
+
 class HashMapTest {
 
     // Test put one entry and get value
@@ -91,9 +91,9 @@ class HashMapTest {
             assertEquals( i.toString(), map.get(i ) )
             if (cap+1 == map.size){
                 assertEquals(cap*2, map.capacity)
-                //println( "Size ${map.size}: $cap - Capacity doubled to ${map.capacity}")
+                println( "Size ${map.size}: $cap - Capacity doubled to ${map.capacity}")
            }
         }
     }
 
-}*/
+}
