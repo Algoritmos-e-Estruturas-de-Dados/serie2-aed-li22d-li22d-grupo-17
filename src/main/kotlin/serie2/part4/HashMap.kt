@@ -72,6 +72,12 @@ class HashMap<K, V>(
             }
         }
     }
+    fun clear() {
+        table = arrayOfNulls(table.size)
+        count = 0
+    }
+
+
 
     override fun iterator(): Iterator<MutableMap.MutableEntry<K, V>> {
         return object : Iterator<MutableMap.MutableEntry<K, V>> {
